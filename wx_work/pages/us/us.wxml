@@ -1,0 +1,12 @@
+<!--pages/us/us.wxml-->
+<view class='container'>
+    <view class='list' data-id="{{item.articleId}}" wx:for="{{ actList }}" bindtap='act'>
+        <image src="http://image.pikachu.ltd/{{ item.mainImgUrl }}"></image>
+        <view class='title'>{{item.title}}</view>
+        <view class='main'>{{item.summary}}</view>
+        <view>#{{item.categoryName}}</view>
+    </view>
+    <view>
+        <image src='../../images/logo.png'></image>
+    </view>
+</view>

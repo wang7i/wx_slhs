@@ -1,0 +1,31 @@
+/* pages/us/us.wxss */
+.list {
+    padding: 0 28rpx;
+}
+.list image {
+    height: 600rpx;
+    width: 100%;
+}
+.list .title {
+    font-size: 36rpx;
+    margin: 10rpx 0 40rpx;
+    font-weight: 500;
+}
+.list .main {
+    font-size: 28rpx;
+    color: #a9a9a9;
+}
+.list > view:last-child {
+    color: #69C3AA;
+    font-size: 28rpx;
+    font-weight: bold;
+    margin: 40rpx 0;
+}
+.container > view:last-child {
+    text-align: center;
+}
+.container > view:last-child image {
+    width: 400rpx;
+    height: 160rpx;
+    margin: 50rpx 0;
+}

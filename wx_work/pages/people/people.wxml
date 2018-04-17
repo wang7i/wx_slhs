@@ -1,0 +1,40 @@
+<!--pages/people/people.wxml-->
+<view class='container'>
+    <view bindtap='ok' wx:if="{{add==false}}">完成</view>
+    <view bindtap='add' wx:else>添加</view>
+    <view wx:if="{{add==false}}">
+    <view class='jia' bindtap='addPeople'>
+        <text>＋</text>添加入住人
+    </view>
+    <checkbox-group>
+    <view wx:for="{{ people }}" class='list' >
+        <view>
+            <checkbox value="{{item.id}}" data-index='{{index}}' bindtap='checked' />
+            <view class='man'>
+                <view>{{item.name}}</view>
+                <view>{{item.id}}</view>
+            </view>
+        </view>
+        <view>
+            <image src='../../images/startEnd.jpg'></image>
+        </view>
+    </view>
+    </checkbox-group>
+    </view>
+    <view wx:else class='add'>
+        <view>
+            <view>真实姓名</view>
+            <input value='{{name}}' bindinput='name' type='text' placeholder='必填,请确保信息真实'></input>
+        </view>
+        <view>
+            <view>身份证</view>
+            <input value='{{ id }}' bindinput='id' maxlength='18' type='idcard' placeholder='必填,请确保信息真实'></input>
+        </view>
+        <view>
+            <view>手机号</view>
+            <input value='{{tel}}' bindinput='tel' maxlength='11' type='number' placeholder='选填'></input>
+        </view>
+    </view>
+</view>
+<import src="/pages/toptips/toptips.wxml" />
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

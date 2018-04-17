@@ -1,0 +1,7 @@
+<!--pages/city/city.wxml-->
+<view class='container'>
+    <view>热门城市</view>
+    <view class='list' wx:for="{{ cityList }}" data-name="{{item.cityName}}" data-id="{{ item.cityId }}" bindtap='city'>
+        {{ item.cityName }}
+    </view>
+</view>

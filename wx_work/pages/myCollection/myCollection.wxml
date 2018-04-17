@@ -1,0 +1,33 @@
+<!--pages/myCollection/myCollection.wxml-->
+<view class='container'>
+    <view class="conTitle">
+        <text style="border-bottom:{{border1}}" bindtap="change" id="1">文章</text>
+        <text style="border-bottom:{{border2}}" bindtap="change" id="2">酒店</text>
+    </view>
+    <view class='list'>
+        <view class='list-item' wx:for="{{ articleList }}" catchtap='myCollection' data-id="{{ item.id }}" wx:if="{{ hide }}">
+            <view>
+                <view>
+                    <view class='title'>{{ item.title }}</view>
+                    <view>{{ item.collectionTime }}</view>
+                </view>
+                <view>
+                    <image src='http://image.pikachu.ltd/{{ item.mainImageUrl }}'></image>
+                </view>
+            </view>
+            <view>#文章</view>
+        </view>
+        <view class='list-item' wx:for="{{ roomList }}" catchtap='myCollection' data-id="{{ item.roomId }}" wx:if="{{ !hide }}">
+            <view>
+                <view>
+                    <view class='title'>{{ item.roomName }}</view>
+                    <view>{{ item.collectionTime }}</view>
+                </view>
+                <view>
+                    <image src="http://image.pikachu.ltd/{{ item.mainPictureUrl }}"></image>
+                </view>
+            </view>
+            <view>#酒店</view>
+        </view>
+    </view>
+</view>

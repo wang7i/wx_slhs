@@ -1,0 +1,19 @@
+<!--pages/act/act.wxml-->
+<view class='container'>
+    <import src="../../wxParse/wxParse.wxml"/>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    <view class='share'>
+        <view>{{ actDetail.collectionNumber }} 收藏</view>
+        <view> · </view>
+        <view>{{ actDetail.starNumber }} 分享</view>
+    </view>
+    <view class='shareImg'>
+        <image bindtap='collection' src='../../images/startEnd.jpg'></image>
+        <button open-type="share" catchtap='onShareAppMessage'>
+            <image src='../../images/startIng.jpg'></image>
+        </button>
+    </view>
+    <view class='btn'>
+        <image src='../../images/logo.png'></image>
+    </view>
+</view>

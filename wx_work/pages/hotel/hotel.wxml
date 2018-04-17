@@ -1,0 +1,22 @@
+<!--pages/hotel.wxml-->
+<view class='container'>
+    <view class='top'>
+        <view bindtap='date'>时间: {{ dates }}</view>
+        <view bindtap='city' data-id="{{ city.cityId }}">位置： {{ city.name }}</view>
+    </view>
+    <view class='list' wx:for="{{ cityRoomList }}" data-id="{{ item.roomId }}" bindtap='detail'>
+        <image src="http://image.pikachu.ltd/{{ item.mainPictureUrl }}"></image>
+        <view>{{ item.roomName }}</view>
+        <view>¥ {{ item.price }}/晚</view>
+    </view>
+    <view class='sign'>
+        <text class='signL'></text>
+        <view>您可能对以下内容感兴趣</view>
+        <text class='signR'></text>
+    </view>
+    <view class='list' wx:for="{{roomList}}" data-id="{{ item.roomId }}" bindtap='detail'>
+        <image src="http://image.pikachu.ltd/{{ item.mainPictureUrl }}"></image>
+        <view>{{ item.roomName }}</view>
+        <view>¥ {{ item.price }}/晚</view>
+    </view>
+</view>

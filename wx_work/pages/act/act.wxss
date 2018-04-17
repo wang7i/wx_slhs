@@ -1,0 +1,71 @@
+/* pages/act/act.wxss */
+
+.container {
+    padding: 0 30rpx;
+}
+
+.share {
+    display: flex;
+    font-size: 28rpx;
+    color: #a9a9a9;
+    align-items: center;
+    padding-top: 30rpx;
+}
+
+.share > view:nth-child(2) {
+    margin: 10rpx;
+}
+
+.shareImg {
+    text-align: center;
+    margin: 50rpx 0;
+    
+}
+.btn {
+    text-align: center;
+    padding-bottom: 30rpx;
+}
+.btn image {
+    width: 150rpx;
+    height: 100rpx;
+}
+.shareImg image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.shareImg image:first-child {
+    margin-right: 30rpx;
+}
+
+button {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 0;
+    border-radius: 0;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    color: #000;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+button::after {
+    border: none;
+}
+
+input {
+    border: none;
+    list-style: none;
+}

@@ -1,0 +1,88 @@
+<!--pages/rdetail/rdetail.wxml-->
+<view class='container'>
+    <view class='top'>
+        <image src="http://image.pikachu.ltd/{{ act.mainPic }}"></image>
+        <view>
+            <view>{{ act.name }}</view>
+            <view bindtap='jumDate' wx:if="{{ startDate != '' }}">入住{{ startDate }} 离开{{ endDate }}</view>
+            <view wx:else bindtap='jumDate'>请选择入住/离开时间</view>
+            <view>共{{ time }}晚</view>
+        </view>
+    </view>
+    <view class='tel'>
+        <view>客服电话</view>
+        <view bindtap='call'>400-870-3070</view>
+    </view>
+    <view class='num'>
+        <view>房间数量</view>
+        <view>
+            <view class='jian' bindtap='jian' style="background: {{ bgcolor == true ? '#000' : '#666' }}">－</view>
+            <view>{{ num }}</view>
+            <view class='jia' bindtap='jia'>＋</view>
+        </view>
+    </view>
+    <view class='details'>
+        <view class='detail'>
+            <view>入住人信息</view>
+        </view>
+        <view class='pd'>
+            <view>
+                <view>入住人</view>
+                <view bindtap='jumPeople' wx:if="{{people.length !=0}}">{{ people[0].name }},{{ people[0].id }}</view>
+                <view bindtap='jumPeople' wx:else style='color:#808080;flex:1;'>请添加入住人</view>
+            </view>
+            <view>
+                <image bindtap='jumPeople' src='../../images/startIng.jpg'></image>
+            </view>
+        </view>
+        <view class='detail'>
+            <view>预订人联系方式</view>
+        </view>
+        <view class='phone'>
+            <view>
+                <view>联系人</view>
+                <input type='text' bindinput='name' value='{{ name }}' maxlength='4' placeholder='请输入联系人姓名'></input>
+            </view>
+            <view>
+                <view>微信号</view>
+                <input type='text' bindinput='wx' value='{{ wx }}' placeholder='请输入您的微信账号'></input>
+            </view>
+            <view>
+                <view>手机号</view>
+                <input type='number' bindinput='phone' value='{{ phone }}' maxlength='11' placeholder="请填写您的手机号"></input>
+            </view>
+            <view>
+                <view>邮箱号</view>
+                <input type='text' bindinput='email' value='{{ email }}'  placeholder="请填写您的邮箱地址"></input>
+            </view>
+        </view>
+        <view class='detail'>
+            <view>特殊要求</view>
+        </view>
+        <view class='spe'>
+            <view>备注</view>
+            <input type='text' bindinput='spe' value='{{ spe }}' placeholder="选填,如有特殊要求请备注"></input>
+        </view>
+        <view class='agree'>
+            <view class='icon' bindtap='hidden'>
+                <icon hidden="{{ hidden }}" type="success_no_circle" size='14' color='#50B254'>
+                </icon>
+            </view>
+            <view>
+                <view bindtap='hidden'>我同意
+                    <text catchtap='xieyi'>《啊啊服务协议》</text> 和 
+                    <text catchtap='xieyi'>《销售政策》</text>
+                </view>
+            </view>
+        </view>
+        <view class='bottom'>
+            <view>
+                <view>总计</view>
+                <view>¥ {{ act.money }}</view>
+            </view>
+            <view bindtap='pay'>立即支付</view>
+        </view>
+    </view>
+</view>
+<import src="/pages/toptips/toptips.wxml" />
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

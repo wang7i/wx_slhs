@@ -1,0 +1,21 @@
+<!--pages/tel/tel.wxml-->
+<view class='container'>
+    <view class='top'>
+         <!-- <icon type='warn' color="#3EBBCB"></icon>  -->
+         <text> 为方便您的后续操作，请先验证手机号</text>
+    </view>
+    <view>
+        <form bindsubmit="formSubmit">
+            <view class='tel'>
+                <input placeholder='请输入您的手机号码' value='{{tel}}' type='number' maxlength='11' bindinput='tel'></input>
+            </view>
+            <view class='code'>
+                <input placeholder='输入验证码' value='{{code}}' type='number' maxlength='6'></input>
+                <view bindtap='send'>获取验证码</view>
+            </view>
+            <button form-type='submit'>确定</button>
+        </form>
+    </view>
+</view>
+<import src="/pages/toptips/toptips.wxml" />
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

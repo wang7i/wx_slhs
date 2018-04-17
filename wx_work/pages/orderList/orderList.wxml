@@ -1,0 +1,17 @@
+<!--pages/orderList/orderList.wxml-->
+<view class='container'>
+    <view class='list'>
+        <view class='list-item' wx:for="{{orderList}}" catchtap='myOrder' data-id="">
+            <view>
+                <view>
+                    <view class='title'>丽江花间堂唯美人文客栈·知春园</view>
+                    <view>2018-03-28 14:18:56</view>
+                </view>
+                <view>
+                    <image src='../../images/ceshi.jpg'></image>
+                </view>
+            </view>
+            <view>#订单</view>
+        </view>
+    </view>
+</view>

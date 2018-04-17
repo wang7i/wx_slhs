@@ -1,0 +1,29 @@
+/* pages/orderList/orderList.wxss */
+.list {
+    padding: 30rpx;
+    background: #fff;
+    position: relative;
+}
+.list-item {
+    border-bottom: 1px solid #eee;
+    padding: 80rpx 0 50rpx;
+}
+.list-item > view:last-child {
+    font-size: 32rpx;
+    color: #509BE5;
+}
+.list-item > view:first-child {
+    display: flex;
+    justify-content: space-between;
+    font-size: 32rpx;
+}
+.list-item > view:first-child > view:first-child {
+    width: 350rpx;
+}
+.title {
+    margin-bottom: 20rpx;
+}
+.list-item > view:first-child image {
+    width: 200rpx;
+    height: 150rpx;
+}

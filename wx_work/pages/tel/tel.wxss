@@ -1,0 +1,47 @@
+.top {
+    font-size: 28rpx;
+    color: #3EBBCB;
+    height: 70rpx;
+    background: #EDF8FA;
+    text-align: center;
+    line-height: 70rpx;
+    /* display: flex;
+    align-items: center;
+    margin: auto; */
+}
+/* icon {
+    margin-right: 10rpx;
+} */
+.tel,.code {
+    position: relative;
+}
+.container > view:last-child {
+    padding: 0 30rpx;
+}
+.tel input,.code input{
+    font-size: 32rpx;
+    color: #C8C8C8;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #f6f6f6;
+}
+.code view {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 28rpx;
+    color: #fff;
+    background: #4ABDCC;
+    border-top-left-radius: 8rpx;
+    border-top-right-radius: 8rpx;
+    border-bottom-left-radius: 8rpx;
+    border-bottom-right-radius: 8rpx;
+    padding: 10rpx 30rpx;
+    transform: translateY(-50%); 
+    z-index: 9;
+}
+button {
+    margin-top: 100rpx;
+    background: #4ABDCC;
+    font-size: 30rpx;
+    color: #fff;
+}

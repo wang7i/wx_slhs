@@ -1,0 +1,49 @@
+/* pages/myOrder/myOrder.wxss */
+page {
+    background: #fbfbfb;
+}
+.page {
+    background: #fff;
+    padding: 30rpx;
+    font-size: 28rpx;
+    color: #999;
+}
+.top {
+  display: flex;
+  padding: 30rpx 0;
+  font-size: 26rpx;
+  color: #6E6E6E;
+  align-items: center;
+  background: #fff;
+}
+.top image {
+  width: 330rpx;
+  height: 220rpx;
+  margin-right: 30rpx;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
+}
+.top > view > view:first-child{
+  font-size: 32rpx;
+}
+.top > view > view:nth-child(2) {
+  margin: 30rpx 0;
+}
+.tel,.num {
+  display: flex;
+  margin: 20rpx 0;
+  padding: 30rpx;
+  justify-content: space-between;
+  font-size: 32rpx;
+  background: #fff;
+  align-items: center;
+}
+.page > view:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+.page > view {
+    margin-bottom: 30rpx;
+}

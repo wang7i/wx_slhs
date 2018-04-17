@@ -1,0 +1,105 @@
+ page {
+    padding: 100rpx 0 100rpx;
+} 
+.box {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.pink-color {
+  color: rgb(64, 70, 128);
+}
+.white-color {
+  color: #fff;
+}
+.fs24 {
+  font-size: 24rpx;
+}
+.fs28 {
+  font-size: 28rpx;
+}
+.fs32 {
+  font-size: 32rpx;
+}
+.fs36 {
+  font-size: 36rpx;
+}
+/* pages/calendar/calendar.wxss ====================================*/
+
+.date-area {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+.weeks {
+    padding: 10px 0;
+    height: 50rpx;
+    line-height: 50rpx;
+    border: 1px solid #eee;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+}
+.week {
+    flex: 1;
+    text-align: center;
+}
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+.grid {
+    display: flex;
+    width: 107.1428571429rpx;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 9px 0;
+    text-align: center;
+    /*border: 1px solid lightgray;*/
+}
+.day {
+    width: 65rpx;
+    padding: 13rpx 0; 
+    color: black;
+    font-size: 26rpx;
+    font-weight: 200;
+    text-align: center;
+}
+.border-radius {
+    border-top-left-radius: 15rpx;
+    border-bottom-left-radius: 15rpx;
+    border-top-right-radius: 15rpx;
+    border-bottom-right-radius: 15rpx;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+.disable {
+    color: #999;
+}
+.pink-bg {
+    background-color: #509BE5;
+}
+.purple-bg {
+    background-color: #b8b8f1;
+}
+.save {
+    position: fixed;
+    background: #509BE5;
+    bottom: 20rpx;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    height: 70rpx;
+    line-height: 70rpx;
+}

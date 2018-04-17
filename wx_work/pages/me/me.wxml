@@ -1,0 +1,56 @@
+<!--pages/me/me.wxml-->
+<view class='container'>
+    <view class='user'>
+        <view wx:if="{{ hasUserInfo }}">
+            <image src='{{ userInfo.avatarUrl }}'></image>
+            <view>{{ userInfo.nickName }}</view>
+        </view>
+        <view wx:else style='line-height:300rpx;'>
+            请登录才可查看订单
+        </view>
+    </view>
+    <view class='list'>
+        <view>我的订单</view>
+        <view bindtap='orderList' class='more'>更多</view>
+        <view class='list-item' wx:for="{{ orderList }}" catchtap='myOrder' data-id="{{ item.orderId }}">
+            <view>
+                <view>
+                    <view class='title'>{{ item.linkName }}</view>
+                    <view>{{ item.createdAt }}</view>
+                </view>
+                <view>
+                    <image src="http://image.pikachu.ltd/{{ item.mainPictureUrl }}"></image>
+                </view>
+            </view>
+            <view>#订单</view>
+        </view>
+    </view>
+    <view class='m-list'>
+        <view style='text-align:center;font-size: 36rpx;font-weight: bold;'>我的收藏</view>
+        <view bindtap='myCollection' class='more'>更多</view>
+        <view class='list-item' data-id="{{ item.roomId }}" data-type="room" catchtap='collection' wx:for="{{ roomList }}">
+            <view>
+                <view>
+                    <view class='title'>{{ item.roomName }}</view>
+                    <view>{{ item.collectionTime }}</view>
+                </view>
+                <view>
+                    <image src="http://image.pikachu.ltd/{{ item.mainPictureUrl }}"></image>
+                </view>
+            </view>
+            <view>#酒店</view>
+        </view>
+        <view class='list-item' data-id="{{ item.id }}" data-type="articles" catchtap='collection' wx:for="{{ articleList }}">
+            <view>
+                <view>
+                    <view class='title'>{{ item.title }}</view>
+                    <view>{{ item.collectionTime }}</view>
+                </view>
+                <view>
+                    <image src="http://image.pikachu.ltd/{{ item.mainImageUrl }}"></image>
+                </view>
+            </view>
+            <view>#文章</view>
+        </view>
+    </view>
+</view>

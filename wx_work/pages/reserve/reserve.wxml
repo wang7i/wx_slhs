@@ -1,0 +1,69 @@
+<!--pages/reserve/reserve.wxml-->
+<view class='container'>
+    <view class='swiper-container'>
+        <swiper current="{{swiperCurrent}}" bindchange="swiperChange" autoplay="true">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{ item }}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="dots">
+            <block wx:for="{{imgUrls}}" wx:key="unique">
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+    </view>
+    <view class='name'>
+        <view>山里寒舍订房</view>
+        <view class='imp'>
+            <view>聚会</view>
+            <view>户外</view>
+            <view>慢生活</view>
+            <view>休闲</view>
+            <view>私密</view>
+        </view>
+        <view class='tel' bindtap='call'>
+            <image src='../../images/startIng.jpg'></image>
+            联系电话
+        </view>
+    </view>
+    <view class='look'>
+        <view class='city' bindtap='city'>
+            <view data-id="{{ city.cityId }}">{{city.name}}</view>
+            <view>选择目的地</view>
+        </view>
+        <view class='time'>
+            <view bindtap='date'>
+                <view>入住</view>
+                <view>离店</view>
+            </view>
+            <view class='chouse' bindtap='date'>
+                <view>
+                    <view>{{ startDate }}</view>
+                </view>
+                <view>{{ time }} 晚</view>
+                <view>
+                    <view>{{ endDate }}</view>
+                </view>
+            </view>
+            <view class='lookup' bindtap='jumpHotel'>查询酒店</view>
+        </view>
+    </view>
+    <view class='list'>
+        <view>
+            <view>推荐酒店</view>
+            <!-- <view>所有订单</view> -->
+        </view>
+        <view class='actList' wx:for="{{ roomList }}" bindtap='detail' data-id="{{ item.roomId }}">
+            <image src="http://image.pikachu.ltd/{{ item.mainPictureUrl }}"></image>
+            <view>
+                <view class='title'>{{item.roomName}}</view>
+                <view>
+                    <view> <text>{{ item.price }}</text> /晚</view>
+                    <view class='reserve' data-money="{{ item.price }}" data-id="{{ item.roomId }}" data-name="{{item.roomName}}"data-img="{{item.mainPictureUrl}}" catchtap='reserve'>预定</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

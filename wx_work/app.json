@@ -1,0 +1,63 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/rdetail/rdetail",
+        "pages/city/city",
+        "pages/date/date",
+        "pages/reserve/reserve",
+        "pages/us/us",
+        "pages/me/me",
+        "pages/tel/tel",
+        "pages/act/act",
+        "pages/people/people",
+        "pages/detail/detail",
+        "pages/hotel/hotel",
+        "pages/ceshi/ceshi",
+        "pages/myOrder/myOrder",
+        "pages/orderList/orderList",
+        "pages/myCollection/myCollection"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "山里寒舍订房",
+        "navigationBarTextStyle": "black"
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "tabBar": {
+        "color": "#a5a5a5",
+        "selectedColor": "#666",
+        "backgroundColor": "#ececec",
+        "fontSize": "20px",
+        "list": [
+            {
+                "selectedIconPath": "images/tabbar/shouye.png",
+                "iconPath": "images/tabbar/shouye0.png",
+                "pagePath": "pages/index/index",
+                "text": "发现"
+            },
+            {
+                "selectedIconPath": "images/tabbar/wode.png",
+                "iconPath": "images/tabbar/wode0.png",
+                "pagePath": "pages/us/us",
+                "text": "啊啊"
+            },
+            {
+                "selectedIconPath": "images/tabbar/wode.png",
+                "iconPath": "images/tabbar/wode0.png",
+                "pagePath": "pages/reserve/reserve",
+                "text": "预定"
+            },
+            {
+                "selectedIconPath": "images/tabbar/wode.png",
+                "iconPath": "images/tabbar/wode0.png",
+                "pagePath": "pages/me/me",
+                "text": "我的"
+            }
+        ]
+    },
+    "debug": true
+}

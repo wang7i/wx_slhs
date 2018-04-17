@@ -1,0 +1,51 @@
+/* pages/hotel.wxss */
+.container {
+    padding: 50rpx 30rpx;
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50rpx;
+}
+.top > view {
+    width: 340rpx;
+    text-align: center;
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #509BE5;
+    border-top-left-radius: 150rpx;
+    border-top-right-radius: 150rpx;
+    border-bottom-left-radius: 150rpx;
+    border-bottom-right-radius: 150rpx;
+    font-size: 28rpx;
+    color: #fff;
+}
+.list {
+    padding: 50rpx 0;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    font-size: 32rpx;
+}
+.list image{
+    width: 100%;
+    height: 430rpx;
+}
+.list > view:nth-child(2) {
+    margin: 15rpx 0;
+    font-size: 36rpx;
+}
+.sign {
+    justify-content: center;
+    display: flex;
+    font-size: 28rpx;
+    color: #8e8e8e;
+    align-items: flex-end;
+    margin-top: 100rpx;
+}
+.sign text {
+    width: 100rpx;
+    height: 3px;
+    border-top: 1px solid #509BE5;
+    border-bottom: 1px solid #509BE5;
+}

@@ -1,0 +1,13 @@
+/* pages/city/city.wxss */
+.container {
+    font-size: 28rpx;
+    color: #565656;
+}
+.container > view:first-child {
+    margin: 10rpx 0;
+    padding-left: 30rpx;
+}
+.list {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 30rpx;
+}

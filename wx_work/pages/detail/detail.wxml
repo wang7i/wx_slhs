@@ -1,0 +1,61 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+    <view class='swiper-container'>
+        <swiper current="{{swiperCurrent}}" bindchange="swiperChange" autoplay="true">
+            <block wx:for="{{details.roomsPictures}}">
+                <swiper-item>
+                    <image src="http://image.pikachu.ltd/{{ item }}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="dots">
+            <block wx:for="{{details.roomsPicture}}" wx:key="unique">
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+        <view class='pos'>¥ {{ details.price }}/晚</view>
+    </view>
+    <view class='title'>
+        <view>{{ details.roomName }}</view>
+        <image src='../../images/startEnd.jpg' bindtap='collection'></image>
+    </view>
+    <view class='city'>
+        <view>{{ details.address }}</view>
+        <image src='../../images/startEnd.jpg'></image>
+    </view>
+    <view class='time' bindtap='jumpDate'>
+        <view>
+            <view>入住</view>
+            <view>离店</view>
+        </view>
+        <view>
+            <view>{{ startDate }}</view>
+            <view>{{ endDate }}</view>
+        </view>
+    </view>
+    
+</view>
+<view class='konw'>
+    <view>入住须知</view>
+    <view>{{ details.checkInNotice }}</view>
+</view>
+<view class='sheshi'>
+    <view>设施服务</view>
+    <view>
+        <view class='sheshiList' wx:for="{{ details.infrastructures }}">
+            <view class='dui'>
+                <icon type='success_no_circle' color='#000'></icon>
+                <text>{{item}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='ydBtn'>
+    <view>¥{{ details.price }}/晚</view>
+    <view catchtap='reserve'>预定</view>
+</view>
+<!-- <view class='contain'>
+        <view>酒店介绍</view>
+        <view>2018年3月30日讯，本市将建立停车信用奖励和联合惩戒机制，将停车设施建设单位、经营单位、停车人等的违法行为记入信用信息系统，严重的可以进行公示、惩戒，市交通行政主管部门将按国家和本市要求，制定停车信用机制的具体办法。
+        </view>
+    </view> -->
